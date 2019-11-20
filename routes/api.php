@@ -6,7 +6,7 @@ use Dingo\Api\Routing\Router;
 $api = app(Router::class);
 
 $api->version('v1', function (Router $api) {
-    $api->group(['prefix' => 'auth'], function(Router $api) {
+    $api->group(['prefix' => 'auth', 'middleware' => ['localization']], function(Router $api) {
         $api->post('signup', 'App\Api\V1\Controllers\SignUpController@signUp');
         $api->post('login', 'App\Api\V1\Controllers\LoginController@login');
 
@@ -18,7 +18,7 @@ $api->version('v1', function (Router $api) {
         $api->get('me', 'App\Api\V1\Controllers\UserController@me');
     });
 
-    $api->group(['middleware' => 'jwt.auth'], function(Router $api) {
+    $api->group(['middleware' => 'jwt.auth', 'localization'], function(Router $api) {
         $api->group(['middleware' => 'role:developer', ], function(Router $api) {
             $api->post('createRole', 'App\Api\V1\Controllers\Developer\RoleController@store');
             $api->post('viewRole', 'App\Api\V1\Controllers\Developer\RoleController@index');
