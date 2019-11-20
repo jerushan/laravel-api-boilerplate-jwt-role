@@ -16,7 +16,6 @@
         "brozot/laravel-fcm": "^1.2",
         "pusher/pusher-php-server": "^3.2",
         "spatie/laravel-backup": "^5.0.0"
-
     },
     "require-dev": {
         "filp/whoops": "^2.0",
