@@ -2,8 +2,8 @@
 
 namespace App\Api\V1\Controllers;
 
-use App\Http\Controllers\Controller;
 use Auth;
+use App\Http\Controllers\Controller;
 
 class LogoutController extends Controller
 {
