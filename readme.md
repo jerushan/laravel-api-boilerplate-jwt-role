@@ -40,7 +40,6 @@ For each controller there's an already setup route in `routes/api.php` file:
 * `POST api/auth/logout`, to log out the user by invalidating the passed token;
 * `GET api/auth/me`, to get current user data;
 
-- Login with developer credentials
 * `POST api/createRole`, to create a role;
 * `POST api/viewRole`, to to view all roles;
 * `POST api/updateRole`, to update a role;
