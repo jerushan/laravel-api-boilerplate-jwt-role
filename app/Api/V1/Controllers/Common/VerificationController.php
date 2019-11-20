@@ -24,7 +24,7 @@ class VerificationController extends Controller
     {
         
     }
-//------------------------------------------ Send Verification to phone & verify phone ------------------------------------------//
+
     public function sendVerificationPin($user)
     {
         $pin = mt_rand(100000, 999999);
@@ -89,11 +89,6 @@ class VerificationController extends Controller
         else  return response()->json(['status' => Lang::get('messages.account_already_verified'),], 200);
     }
 
-//------------------------------------------ ------------------------------------- --------------------------------------------//
-
-
-
-//-------------------------------------------- Send Verification emails & verify  ---------------------------------------------//
     public function sendVerificationEmail($user)
     {
         $userEmail = $user->email;
@@ -175,9 +170,7 @@ class VerificationController extends Controller
         }
         else return $this->response->error(Lang::get('messages.invalid_url_or_not_found'), 200);
     }
-//------------------------------------------ ------------------------------------- ---------------------------------------------//
 
-//-------------------------------------------- Send Pin to emails & verify  ---------------------------------------------//
     public function sendPinToEmail($user, $pin)
     {
         $userEmail = $user->email;
@@ -219,9 +212,6 @@ class VerificationController extends Controller
         }
     } 
 
-//------------------------------------------ ------------------------------------- ---------------------------------------------//
-
-//-------------------------------------------- Send Pin to phone & verify  ---------------------------------------------//
     public function sendPinToPhone($user, $pin)
     {
         $userPhone = $user->phone;
@@ -237,9 +227,6 @@ class VerificationController extends Controller
         return $smsStatus;
     } 
 
-//------------------------------------------ ------------------------------------- ---------------------------------------------//
-
-//------------------------------------------ Send Verification to Old & New emails ---------------------------------------------//
     public function sendVerificationToNewEmail($user)
     {
         $userEmail = $user->email;
@@ -310,12 +297,6 @@ class VerificationController extends Controller
         else return $this->response->error(Lang::get('messages.invalid_url_or_not_found'), 200);
     }
 
-    
-//------------------------------------------ ------------------------------------- ---------------------------------------------//
-
-
-
-//--------------------------------------- Send Verification to Old & New phone numbers -----------------------------------------//
     public function sendVerificationToNewPhone($user)
     {
         $userPhone = $user->country_code.$user->phone;
@@ -394,11 +375,6 @@ class VerificationController extends Controller
         else return $this->response->error(Lang::get('messages.changed_phone_data_not_found'), 200);
     }
 
-//--------------------------------------- -------------------------------------------- -----------------------------------------//
-
-
-
-//------------------------------------------------------------ Assets ----------------------------------------------------------//
     public function getTheFrontEndUrl($userType)
     {
         switch ($userType) {
@@ -434,11 +410,7 @@ class VerificationController extends Controller
         $email = substr($emailAndTime, 10);
         return  $email;
     }
-//--------------------------------------- -------------------------------------------- -----------------------------------------//
 
-
-
-//---------------------------------------------- Delete phone verification data ------------------------------------------------//
     public function deletePhoneVerificationData()
     {
         $verifications = Verification::get();
@@ -458,5 +430,4 @@ class VerificationController extends Controller
             }
         }
     }
-//--------------------------------------- -------------------------------------------- -----------------------------------------//
 }
