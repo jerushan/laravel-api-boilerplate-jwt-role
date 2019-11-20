@@ -20,6 +20,7 @@ It is built on top of three big guys:
 - Multiple roles and permissions can be attached to users within teams.
 - Objects ownership verification.
 - Multiple guards for the middleware.
+- View full documentation (https://laratrust.santigarcor.me/api/5.1/).
 - [Laravel gates and policies](http://laratrust.santigarcor.me/docs/5.0/troubleshooting.html).
 
 ## Installation
