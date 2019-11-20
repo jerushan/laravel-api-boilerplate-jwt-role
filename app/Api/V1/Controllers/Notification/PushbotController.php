@@ -2,11 +2,6 @@
 
 namespace App\Api\V1\Controllers\Notification;
 
-use GuzzleHttp\Psr7;
-use Pushbots\PushbotsClient;
-use GuzzleHttp\Exception\ClientException;
-use GuzzleHttp\Exception\ServerException;
-
 use Carbon\Carbon;
 use App\Models\User;
 use App\Models\Device;
@@ -22,6 +17,7 @@ class PushbotController extends Controller
 {
 	public $PUSHBOTS_APP_ID;
 	public $PUSHBOTS_APP_SECRET;
+
     public function __construct()
     {
     	$this->PUSHBOTS_APP_ID = '5dc1138db7941260ca49ee92';
