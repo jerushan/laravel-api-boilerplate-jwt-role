@@ -1,4 +1,4 @@
-## Laravel API Boilerplate (JWT Edition) for Laravel 5.8
+## Laravel API Boilerplate (JWT Edition) & Role management for Laravel 5.8
 
 [![Build Status](https://travis-ci.org/francescomalatesta/laravel-api-boilerplate-jwt.svg?branch=master)](https://travis-ci.org/francescomalatesta/laravel-api-boilerplate-jwt)
 
