@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Validator;
+namespace App\Validators;
 
 use DB;
 use Illuminate\Validation\Validator as BaseValidator;
