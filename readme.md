@@ -2,12 +2,13 @@
 
 Laravel API Boilerplate is a "starter kit" you can use to build your first API in seconds. As you can easily imagine, it is built on top of the awesome Laravel Framework. This version is built on Laravel 5.8!
 
-It is built on top of three big guys:
+It is built with:
 
 * JWT-Auth - [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth)
 * Dingo API - [dingo/api](https://github.com/dingo/api)
 * Laravel-CORS [barryvdh/laravel-cors](http://github.com/barryvdh/laravel-cors)
 * Role Management [santigarcor/laratrust](https://github.com/santigarcor/laratrust)
+* Laravel Backup [spatie/laravel-backup](https://github.com/spatie/laravel-backup)
 
 ## What does Laratrust support?
 
