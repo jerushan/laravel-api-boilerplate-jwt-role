@@ -9,12 +9,24 @@ It is built on top of three big guys:
 * Laravel-CORS [barryvdh/laravel-cors](http://github.com/barryvdh/laravel-cors)
 * Role Management [santigarcor/laratrust](https://github.com/santigarcor/laratrust)
 
+## What does Laratrust support?
+
+- Multiple user models.
+- Multiple roles and permissions can be attached to users.
+- Multiple permissions can be attached to roles.
+- Roles and permissions verification.
+- Roles and permissions caching.
+- Events when roles and permissions are attached, detached or synced.
+- Multiple roles and permissions can be attached to users within teams.
+- Objects ownership verification.
+- Multiple guards for the middleware.
+- [Laravel gates and policies](http://laratrust.santigarcor.me/docs/5.0/troubleshooting.html).
+
 ## Installation
 
-1. run `composer create-project jerushan/laravel-api-boilerplate-jwt-role-management myProject`;
-
-
-Once the project creation procedure will be completed, run the `php artisan migrate` command to install the required tables. then run `php artisan db:seed`.
+1. Clone the project or run `composer create-project jerushan/laravel-api-boilerplate-jwt-role-management myProject`;
+2. run the `php artisan migrate` command to install the required tables.
+3. run `php artisan db:seed` command to create developer account
 
 ## Usage
 
@@ -27,6 +39,14 @@ For each controller there's an already setup route in `routes/api.php` file:
 * `POST api/auth/reset`, to reset your password after the recovery;
 * `POST api/auth/logout`, to log out the user by invalidating the passed token;
 * `GET api/auth/me`, to get current user data;
+
+- Login with developer credentials
+* `POST api/createRole`, to create a role;
+* `POST api/viewRole`, to to view all roles;
+* `POST api/updateRole`, to update a role;
+
+* `POST api/assignRole`, to assign a role for a user;
+* `POST api/detachRole`, to detach a role form a user;
 
 ### Separate File for Routes
 
